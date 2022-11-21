@@ -1,0 +1,12 @@
+tensorflow
+keras
+pandas
+numpy
+matplotlib
+scikit-learn
+pyAudioAnalysis
+librosa
+Flask
+youtube-dl
+eyed3
+pydub

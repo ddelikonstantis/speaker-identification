@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+    %}
+    <h1 align="center">Clip Segments</h1>
+    </br>
+    <h2 align="center">{{title}}</h2>
+    </br>
+    <table align="center" width='100%'>
+      <tr>
+        <th>Time(s)</th>
+        <th>Segment</th>
+        <th>Deep Learning</th>
+        <!-- <th>Probabilities</th> -->
+        <th>Gaussian Mixture Model</th>
+        <!-- <th>Listen</th> -->
+      </tr>
+      {% set ns = namespace(index=0) %}
+      {% for key, value in pred_dict.items() %}
+      <tr>
+          <td class="c1">{{ns.index * segment_duration}}</td>
+         <td class="c2">{{ key }}</td>
+         <td class="c4"><SPAN>{{value.matched_speaker_nn}}</SPAN></td>
+         <!-- <td class="c3">{{value.y_pred_nn}}</td> -->
+         <td class="c3"><SPAN>{{value.matched_speaker_gmm}}</SPAN></td>
+         {% set ns.index = ns.index + 1 %}
+         <!-- <td class="c5"><button type="button" class="bi bi-play" onClick="playSound('{{ key }}')">
+          <span aria-hidden="true">&times;</span>
+        </button></td> -->
+      </tr>
+      {% endfor %}
+      </table>
+    {% endblock %}

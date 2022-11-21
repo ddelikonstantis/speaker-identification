@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+    %}
+    <h1 align="center">Enter Youtube URL</h1>
+      
+  </br>
+    <form method="POST">
+      <textarea name="yb-url" id="yb-url" class="form-control">https://www.youtube.com/watch?v=0GgHhOqUrUw&ab_channel=TeamCoco</textarea>
+      <br />
+      <div align="center">
+        <button type="submit" class="btn btn-primary">Process</button>
+      </div>
+    </form>
+  </br>
+  </br>
+  <h4 align="center">or</h4>
+</br>
+  <h1 align="center">Record Audio</h1>
+
+  <div align="center" id="controls">
+   <button id="recordButton" class="btn btn-primary">Record</button>
+   <button id="stopButton" class="btn btn-primary" disabled>Stop</button>
+   <!-- <button id="pauseButton" class="btn btn-primary" disabled>Process</button> -->
+   
+   
+  </div>
+  <div align="center" id="formats">Format: start recording to see sample rate</div>
+  <p align="center" ><strong>Recordings:</strong></p>
+  <ol id="recordingsList"></ol>
+  {% endblock %}
+    
+    

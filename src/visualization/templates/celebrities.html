@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
+    <h1 align="center">Known Celebrities</h1>
+    <ul class="list-group list-group-flush" id="speakers_list">
+    {% for key, value in speakers.items() %}
+    <li class="list-group-item">
+        {{ value }}
+    </li>
+    {% endfor %}
+    </ul>
+    {% endblock %}
